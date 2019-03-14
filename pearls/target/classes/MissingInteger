@@ -1,0 +1,32 @@
+http://k2code.blogspot.com/2014/04/generate-integer-which-is-not-in-file.html
+--------------------------------------------------------------------------------------------------------------------------------------------------
+
+After each pass your next pass will be on the smaller of the two lists you've compiled.
+
+At some point, you MUST encounter an empty list and this will determine your number. For example let's just use 3 bit numbers.
+
+000
+001
+110
+100
+111
+after the first pass we have
+
+000
+001
+
+110
+100
+111
+Then we look at the 2nd bits in the first list because it is smaller than (or equal to) the second. We would split them into
+
+000
+001
+
+empty list
+notice how the file that would start with 01 is empty, this means that there are no numbers that start with 01 so 010 and 011 are missing.
+
+The reason we must eventually have a missing list is because we are choosing the smaller list for our next pass each time.
+
+
+https://stackoverflow.com/questions/5011589/programming-pearls-binary-search-help#comment5602843_5011626
